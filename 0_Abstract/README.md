@@ -1,9 +1,9 @@
 # Server Room Temperature Monitering System
 ## Abstract
 
-Several consumer devices now involve temperature monitoring. For example, most of the air conditioners on the market feature climate control, where the AC continuously monitors the ambient temperature of a room and accordingly regulates the air conditioning. Even some digital clocks now have temperature monitors embedded in them. Many other consumer appliances also offer temperature monitoring. 
+Wiper is an essential component that used to wipe the raindrops or any water from the windscreen. Wipers are designed and made to clear the water from a windscreen. Most of cars have two wipers on the windscreen, one on the rear window and the other on each headlight. The wiper parts visible from outside the car are the rubber blade, the wiper arm holding the blade, a spring linkage, and parts of the wiper pivots. In this project we will build manually controlled wiper control system.
 
-In this project, we’ve built a temperature sensor using Atmega328p and the variable resistor as  temperature sensor.The purpose of the sensor built here is to monitor the ambient temperature of a room over a cycle of 24 hours and display the current temperature, the maximum temperature recorded, and the minimum temperature recorded within that 24-hour cycle on a serial monnitor. 
+In this project, we’ve built a wiper control system using STM32F4 Discovery board. Here we use builtin button and LEDs to operate or visualize 
 
 ## Features
 -   Monitor temperature of a closed room for safety measurements like it can be used in server rooms, refrigerator, microwave, closed factories etc, 
