@@ -3,7 +3,7 @@ Wiper is an essential component that used to wipe the raindrops or any water fro
 
 __Difference of maually controlled and automated controlled:__
 
-![wiper](https://qph.fs.quoracdn.net/main-qimg-99630675008391d8a9b2fa20964e8bd8-lq)
+![wiper](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/Capture1.PNG)
 
 ## Working method / Scenario:
 1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
