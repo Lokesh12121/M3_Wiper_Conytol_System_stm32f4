@@ -1,7 +1,7 @@
 # Wiper Control System
 Wiper is an essential component that used to wipe the raindrops or any water from the windscreen. Wipers are designed and made to clear the water from a windscreen. Most of cars have two wipers on the windscreen, one on the rear window and the other on each headlight. The wiper parts visible from outside the car are the rubber blade, the wiper arm holding the blade, a spring linkage, and parts of the wiper pivots. In this proect we will build manually controlled wiper control system.
 
-__Difference of maually controlled and automated controlled:__
+## Difference of maually controlled and automated controlled:
 
 ![wiper](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/Capture1.PNG)
 
