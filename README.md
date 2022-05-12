@@ -1,9 +1,7 @@
-# Server Room Temperature Monitering System
-In Monitoring Temperature and humidity for Server Room is a system, which provides information while regulating temperature and humidity inside the server room. There are various types of sensors in the prototype, using all parameters of temperature and humidity that can be measured. This system can be used to monitor the temperature or humidity of a particular room or place. 
+# Wiper Control System
+Wiper is an essential component that used to wipe the raindrops or any water from the windscreen. Wipers are designed and made to clear the water from a windscreen. Most of cars have two wipers on the windscreen, one on the rear window and the other on each headlight. The wiper parts visible from outside the car are the rubber blade, the wiper arm holding the blade, a spring linkage, and parts of the wiper pivots. In this proect we will build manually controlled wiper control system.
 
-Several consumer devices now involve temperature monitoring. For example, most of the air conditioners on the market feature climate control, where the AC continuously monitors the ambient temperature of a room and accordingly regulates the air conditioning. Even some digital clocks now have temperature monitors embedded in them. Many other consumer appliances also offer temperature monitoring. 
-
-## Folder Structure
+# Folder Structure
 | Folder | Discription |
 | :---: | :---: | 
 | 0_Absract | Brief info aout project
