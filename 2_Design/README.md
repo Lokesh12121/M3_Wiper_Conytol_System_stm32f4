@@ -13,6 +13,8 @@
 # Block Diagram Model
 
 ![block diagam](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/control_system.png)
+
+### The working of motor is visualised via LEDs of STM32F4 Discovery Board
    
 ## Tools 
 1.  [Draw.io](https://app.diagrams.net/)
