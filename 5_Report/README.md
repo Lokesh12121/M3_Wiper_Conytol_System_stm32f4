@@ -9,8 +9,6 @@ In this proect we will build manually controlled wiper control system. We built 
 
 ![control system](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/control_system.png)
 
-### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
-
 ## Features
 -   __Step-1:__ The wiper control system becomes active on ___Hold of Button___ or 2 seconds and Red LED will ON indicating system is ON.
 -   __Step-2:__ The system has 3 power levels (i.e, speed of motor in real world), we use (1, 4, 8)Hz as freuency levels used to visualize via LED.
@@ -24,6 +22,8 @@ In this proect we will build manually controlled wiper control system. We built 
 In this project, we’ve built a wiper control system using STM32F4 Discovery board. Here we use builtin ___button___ and ___LEDs___ to operate or visualize the project.We will control onboard four LEDs of STM32F4 discovery board with a push button. As you can see in the figure shown below a blue color push button is available along with four user LEDs.
 
 ![builtin led and button](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/11Capture.PNG)
+
+### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
 
 ## Components, Packages and Software required
 -   [STM32F4 - Discovery](https://pdf1.alldatasheet.com/datasheet-pdf/view/435284/STMICROELECTRONICS/STM32F4DISCOVERY.html) - Allow users to develop audio applications easily. It includes an ST-LINK/V2-A embedded debug tool, one ST-MEMS digital accelerometer, one digital microphone, one audio DAC with integrated class D speaker driver, LEDs, push-buttons, and a USB OTG Micro-AB connector.Specialized add-on boards can be connected by means of the extension header connectors.
