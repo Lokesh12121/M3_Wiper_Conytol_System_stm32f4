@@ -4,22 +4,21 @@
 ### High Level Requirements
 | High Level Requirements  | Description |
 | ------------- | ------------- |
-| HLR1  | Microcontroller |
-| HLR2  | Temperature Sensor |
-| HLR3  | Heat Generation |
-| HLR4  | Display |
-| HLR5  | Software for simulation|
-| HLR6 | Push Buttons |
+| HLR1  | Microcontroller - STM32F4 discovery board |
+| HLR2  | Push button |
+| HLR3  | LED |
+| HLR4  | Software for simulation |
+
 ### Low Level Requirements
 | Low Level Requirements	  | Description |
 | ------------- | ------------- |
-| HLR1_LLR1 | ATmega328  |
-| HLR2_LLR1 | ADC  |
-| HLR2_LLR2 | ADC with PWM-fast  |
-| HLR3_LLR1 | Thermoelectric module  |
-| HLR4_LLR1 | CRO and LED  |
-| HLR5_LLR1 | Code Blocks with AVR GCC compiler  |
-| HLR5_LLR2 | SimulIDE  |
+| HLR1_LLR1 | STM32F4 discovery  |
+| HLR2_LLR2 | PA0 digital pin |
+| HLR2_LLR2 | Pull-down resistor/ Pull-up resistor  |
+| HLR3_LLR3 | I/O PD12, PD13, PD14, PD15 on STM32F407VGT6 |
+| HLR4_LLR4 | xPack - Qemu, xPack - Windows Build Tool, Pack - OpenOCD  |
+| HLR5_LLR4 | avr gcc  |
+| HLR5_LLR4 | STM32 Cube IDE  |
 
 ## 2. What, Why, When, Who, How ( 4W1H )
 ### 4W
