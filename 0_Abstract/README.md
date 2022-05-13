@@ -31,12 +31,6 @@ In this proect we will build manually controlled wiper control system. We built 
 -   __Feature-3(Control Off):__ On key ___press-4___ the system is ON(LED-RED-ON), on press again the system goes back to ___step-2___
 -   __Feature-4(System OFF):__ The wiper control system becomes inactive on ___Hold of Button___ or 2 seconds and Red LED will OFF indicating system is OFF.
 
-### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
-
-## Flow chart
-
-![Flow Chart](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/flow%20chart_1.png)
-
 
 ## Working Scenario
 |Key Press - 1 (Wiper power Lvl-1)|Key Press - 2 (Wiper power Lvl-2)|Key Press - 3 (Wiper power Lvl-3)|
