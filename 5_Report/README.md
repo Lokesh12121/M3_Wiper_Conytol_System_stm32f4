@@ -1,50 +1,48 @@
-# Server Room Temperature Monitering System
-## Introduction
+# Wiper Control System
+## Abstract
 
-Several consumer devices now involve temperature monitoring. For example, most of the air conditioners on the market feature climate control, where the AC continuously monitors the ambient temperature of a room and accordingly regulates the air conditioning. Even some digital clocks now have temperature monitors embedded in them. Many other consumer appliances also offer temperature monitoring. 
+Wiper is an essential component that used to wipe the raindrops or any water from the windscreen. Wipers are designed and made to clear the water from a windscreen. Most of cars have two wipers on the windscreen, one on the rear window and the other on each headlight. The wiper parts visible from outside the car are the rubber blade, the wiper arm holding the blade, a spring linkage, and parts of the wiper pivots.
 
-In this project, we’ve built a temperature sensor using Atmega328p and the variable resistor as  temperature sensor.The purpose of the sensor built here is to monitor the ambient temperature of a room over a cycle of 24 hours and display the current temperature, the maximum temperature recorded, and the minimum temperature recorded within that 24-hour cycle on a serial monnitor. 
+In this proect we will build manually controlled wiper control system. We built a wiper control system using STM32F4 Discovery board. Here we use builtin button and LEDs to operate or visualize the project.We will control onboard four LEDs of STM32F4 discovery board with a push button. 
+
+## Block Diagram
+
+![control system](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/control_system.png)
+
+### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
 
 ## Features
--   Monitor temperature of a closed room for safety measurements like it can be used in server rooms, refrigerator, microwave, closed factories etc.
--   The system will indicate via LED wheather the doors or windows closed or not
--   The system will not turn ON until it becomes closed area
--   It is basically used for server rooms as it needs to maintain precise temperature in the room
--   An alert system can be trigerred according to user temperature.
+-   __Step-1:__ The wiper control system becomes active on ___Hold of Button___ or 2 seconds and Red LED will ON indicating system is ON.
+-   __Step-2:__ The system has 3 power levels (i.e, speed of motor in real world), we use (1, 4, 8)Hz as freuency levels used to visualize via LED.
+    * When the system ___key press-1___(i.e, the push button is pressed once) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 1Hz
+    * When the system ___key press-2___(i.e, the push button is pressed twice) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 4Hz
+    * When the system ___key press-3___(i.e, the push button is pressed thrice) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 8Hz
+-   The sytem will go back to repeat step-2  when ___key press-4___ 
+-   The wiper control system becomes inactive on ___Hold of Button___ or 2 seconds and Red LED will OFF indicating system is OFF.
 
-## Components and Software required
--   [Atmega28p](https://www.arrow.com/en/products/atmega328p-pn/microchip-technology) - A single-chip microcontroller created by Atmel in the megaAVR family
--   [SimulIDE](https://www.simulide.com/p/home.html) -  A simple real time electronic circuit simulator
+## Controlling LEDs with Push Button STM32F4
+In this project, we’ve built a wiper control system using STM32F4 Discovery board. Here we use builtin ___button___ and ___LEDs___ to operate or visualize the project.We will control onboard four LEDs of STM32F4 discovery board with a push button. As you can see in the figure shown below a blue color push button is available along with four user LEDs.
+
+![builtin led and button](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/11Capture.PNG)
+
+## Components, Packages and Software required
+-   [STM32F4 - Discovery](https://pdf1.alldatasheet.com/datasheet-pdf/view/435284/STMICROELECTRONICS/STM32F4DISCOVERY.html) - Allow users to develop audio applications easily. It includes an ST-LINK/V2-A embedded debug tool, one ST-MEMS digital accelerometer, one digital microphone, one audio DAC with integrated class D speaker driver, LEDs, push-buttons, and a USB OTG Micro-AB connector.Specialized add-on boards can be connected by means of the extension header connectors.
+-   [STM32 Cube IDE](https://www.st.com/en/development-tools/stm32cubeide.html) -  STM32CubeIDE is an all-in-one multi-OS development tool, which is part of the STM32Cube software ecosystem. STM32CubeIde Board PhotoSTM32CubeIDE is an advanced C/C++ development platform with peripheral configuration, code generation, code compilation, and debug features for STM32 microcontrollers and microprocessors. 
 -   [VS Code](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications
 -   [LED]() - A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it
 -   [Button]() - A push-button (also spelled pushbutton) or simply button is a simple switch mechanism to control some aspect of a machine or a process
--   [Resistor]() - A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element
--   [Oscilloscope]() - electronic test instrument that graphically displays varying electrical voltages as a two-dimensional plot of one or more signals as a function of time.
+-   [Eclipse Embedded CDT](https://projects.eclipse.org/projects/iot.embed-cdt) - It is a plug-ins allow to create, build, debug and in general to manage Arm & RISC-V projects (executables and static/shared libraries, in both 32 and 64-bit versions) with the Eclipse IDE.
+-   [xPack Qemu](https://xpack.github.io/qemu-arm/#benefits) - xPack QEMU Arm is a fork of the public open-source QEMU project, customised for more support of Cortex-M cores, and a better integration with the GNU Arm QEMU Debugging plug-in.
+-   [xPack OpenOCD](https://xpack.github.io/openocd/#:~:text=The%20xPack%20OpenOCD%20is%20a,code%20available%20from%20the%20repository.) - It is a cross-platform binary distribution of OpenOCD, the Open On-Chip Debugger, an open source project hosted on  SourceForge.
+-   [xPack Windoes Build Tool](https://xpack.github.io/windows-build-tools/) -  It is a Windows specific package, customised for the requirements of the Eclipse CDT managed build projects. It includes a recent version of GNU make and a recent version of BusyBox, which provides a convenient implementation for sh/rm/echo.
 
 ## How the project works
-1.  The LM35 sensor used in this circuit can sense a temperature ranging from -55˚ to 150˚C. Since it is not present SimulIDE, we use potentiometer it acts as an temperature sensor which is manually operated.
-2.  The source code this project is available [here](https://github.com/Lokesh12121/M1_Inventary_Managment_System/tree/main/3_Implementation) , after running the code it generates a .hex and .elf file.
-3.  Build the circuit according to the following diagram ![Circuit diagram](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/0_Abstract/Circuit1.PNG)
-4.  In simulIDE click on mcu and click on load the firmware, and select .hex file
-5.  As u know the circuit only works when it is in closed space, so press all the buttons ON.
-6.  And finally the circuit works, vary the potentiometer to vary the temperature
-7.  The results is visualised in serial monitor via UART communication.
+1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
+2.  __Wiper ON:__ On press of the user input, Blue, Green and Orange LEDs come ON one at a time with the set frequency, The frequency changes on every alternate key press, 3 frequency levels with 1, 4 and 8 Hz
+3.  __Wiper OFF:__ The LED glow pattern stops on the 4th press; the wiper action starts next press onwards as mentioned in step 2
+4.  __Ignition Key Position at Lock:__ The Red LED is OFF, if the user button is pressed and held for 2 secs
 
-## Applications
-1.  Server Rooms - the server rooms are closed for safety and security purpose, as it is closed it keeps warm temperature. The temperature is monitered and is controlled via coolers, fans etc.
-2.  Microwave - A kitchen device used for cooking, it is implemented over there to maintain temperature.
-3.  Laboratoy - It is very important ti maintain a closed laboratory because of harmful chemicals and to maintain precise temperature
-
-### 3. Implementation Block Diagram 
-![Design Flow](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/1_Requirements/block_diagram.PNG)
-
-## In Action
-|ON|OFF|
-|:--:|:--:|
-|![ON](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/3_Implementation/simulation/circuit-main.gif)|![OFF](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/3_Implementation/simulation/OFF_circuit.gif)|
-
-## Working and Simulation 
-![short vid of working cicuit](https://github.com/Lokesh12121/M2_Server_Room_Temperatue_Monitering_SYS/blob/main/6_Output/Shortvidsim.gif)
-
-[Click here](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/6_Output/Simulation_working.mp4) to watch ful vedio.
-##  THANK YOU
+## Working when ON
+|Key Press - 1|Key Press - 2|Key Press - 3|
+|:--:|:--:|:--:|
+|![press1](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif)|![press2](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_2.gif)|![press3](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_3.gif)|
