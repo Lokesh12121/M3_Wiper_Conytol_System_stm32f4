@@ -3,6 +3,10 @@ Wiper is an essential component that used to wipe the raindrops or any water fro
 
 In this proect we will build manually controlled wiper control system. We built a wiper control system using STM32F4 Discovery board. Here we use builtin button and LEDs to operate or visualize the project.We will control onboard four LEDs of STM32F4 discovery board with a push button.
 
+![block diaram](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/control_system.png)
+
+### The working o motor is visualised via LEDs in STM32F4 - Discovery board
+
 ## Folder Structure
 | Folder | Discription |
 | :---: | :---: | 
