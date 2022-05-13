@@ -20,7 +20,7 @@ Wiper is an essential component that used to wipe the raindrops or any water fro
 ## In Action
 |ON|OFF|
 |:--:|:--:|
-|![ON](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/3_Implementation/simulation/circuit-main.gif)|![OFF](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/3_Implementation/simulation/OFF_circuit.gif)|
+|![ON](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/ON_state.mp4)|![OFF](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/OFF_state.gif)|
 
 ## CI and Code Quality
 
