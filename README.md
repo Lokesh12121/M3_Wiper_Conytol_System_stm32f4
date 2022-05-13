@@ -22,7 +22,7 @@ In this proect we will build manually controlled wiper control system. We built 
 ## In Action
 |ON|OFF|
 |:--:|:--:|
-|![ON](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/ON_state.gif)|![OFF](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/OFF_state.gif)|
+|![ON]()|![OFF]()|
 
 
 ## Scenario:
@@ -34,7 +34,11 @@ In this proect we will build manually controlled wiper control system. We built 
 ## Working when ON
 |Key Press - 1|Key Press - 2|Key Press - 3|
 |:--:|:--:|:--:|
-|![press1](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif)|![press2](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_2.gif)|![press3](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_3.gif)|
+|![press1](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif)|![press2](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_2.gif)|![press3](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/ON_state.gif)|
+
+|Key Press and Hold|Key Press - 4|Key Press - 5(goes back to step-2)|
+|:--:|:--:|:--:|
+| ![press hold](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/hold_on.gif) | ![press4](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/pess4.gif) | ![press 5](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif) |
 
 ## CI and Code Quality
 
