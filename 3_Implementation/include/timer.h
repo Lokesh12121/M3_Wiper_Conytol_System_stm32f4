@@ -1,7 +1,7 @@
 /**
  * @file timer.h
  * @author Lokesh R
- * @brief A header file for fast pulse width modulation generation using timer
+ * @brief A header file of timer
  * @version 0.1
  * @date 2022-04-22
  * @copyright Copyright (c) 2022
