@@ -12,10 +12,6 @@
    
 # Behaviour Model
 
-![Flow char](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/control_system.png)
-
-# Block Diagram
-
 ![block diagam](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/2_Design/user_behavior.png)
    
 ## Tools 
