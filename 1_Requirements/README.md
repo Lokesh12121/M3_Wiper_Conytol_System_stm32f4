@@ -27,9 +27,7 @@
 | What | Why |
 | A wiper speed control system for an wiper controls the operational speed of a wiper in accordance with rain conditions. The control system includes a push button and LED's to control the flickering speed (wiper speed). | To reduce driving distractions and allow drivers to focus on main task of driving. The distraction eliminated with the development of this system is the manual adjustment of wipers when driving in precipitation. |
 | When | Who |
-| Wiper is an essential component that used to wipe raindrops or any water from the vehicle’s windscreen. The system
-used to activate the wiper manually and the process of pulling up the wiper is difficult to be handled. Thus, this system is
-proposed to solve these problems | For all LMV and HMV needs this system. The wiper serves to clean the windshield of the car at the front and rear, although not all cars have wipers on the rear side. Wiper works by removing oil, dust, rainwater, and dirt that get stuck to the windshield |
+| Wiper is an essential component that used to wipe raindrops or any water from the vehicle’s windscreen. The system used to activate the wiper manually and the process of pulling up the wiper is difficult to be handled. Thus, this system is proposed to solve these problems | For all LMV and HMV needs this system. The wiper serves to clean the windshield of the car at the front and rear, although not all cars have wipers on the rear side. Wiper works by removing oil, dust, rainwater, and dirt that get stuck to the windshield |
 
 ### 1H
 | How |
@@ -38,7 +36,7 @@ proposed to solve these problems | For all LMV and HMV needs this system. The wi
 
  :+1: **Pros :**  Simple, easy to maintain and manage. 
  
- :-1: **Cons :**  It is not autimatic using any rain sensors
+ :-1: **Cons :**  It is not automated using any rain sensors
  
 ### 3. SWOT Analysis
 ![SWOT Analysis](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/1_Requirements/swot.PNG)
