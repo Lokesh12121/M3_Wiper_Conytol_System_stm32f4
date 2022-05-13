@@ -33,6 +33,10 @@ In this proect we will build manually controlled wiper control system. We built 
 
 ### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
 
+## Flow chart
+
+![Flow Chart](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/flow%20chart.png)
+
 ## How the project works
 1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
 2.  __Wiper ON:__ On press of the user input, Blue, Green and Orange LEDs come ON one at a time with the set frequency, The frequency changes on every alternate key press, 3 frequency levels with 1, 4 and 8 Hz
