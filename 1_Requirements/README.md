@@ -25,18 +25,20 @@
 |   |   |
 | ----------- | ----------- |
 | What | Why |
-| In Monitoring Temperature and humidity for Server Room is a system, which provides information while regulating temperature and humidity inside the server room. There are various types of sensors in the prototype, using all parameters of temperature and humidity that can be measured. This system can be used to monitor the temperature or humidity of a particular room or place. | The computer rooms contain servers and data of very high value. The normal temperature in a server room should be between 21 and 25°C. The American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE) recommends a temperature between 18°C and 27°C. In fact, going from 20°C to 27°C reduces eclectic consumption by 4% |
+| A wiper speed control system for an wiper controls the operational speed of a wiper in accordance with rain conditions. The control system includes a push button and LED's to control the flickering speed (wiper speed). | To reduce driving distractions and allow drivers to focus on main task of driving. The distraction eliminated with the development of this system is the manual adjustment of wipers when driving in precipitation. |
 | When | Who |
-| The apllication can be used to make improved safety in server rooms, better reporting and forecasting data continously. | It can be used for any server rooms, datacentor platorm either it can be pharma store( since it contains flamables ), retail shop, personal inventory etc. to monitor the temperature |
+| Wiper is an essential component that used to wipe raindrops or any water from the vehicle’s windscreen. The system
+used to activate the wiper manually and the process of pulling up the wiper is difficult to be handled. Thus, this system is
+proposed to solve these problems | For all LMV and HMV needs this system. The wiper serves to clean the windshield of the car at the front and rear, although not all cars have wipers on the rear side. Wiper works by removing oil, dust, rainwater, and dirt that get stuck to the windshield |
 
 ### 1H
 | How |
 | ----- |
-|With the use of simple interface with the screen, the person can visualize data. |
+|With the use of push button we can control the whole system, and use the wiper to control to wipe the windshield |
 
  :+1: **Pros :**  Simple, easy to maintain and manage. 
  
- :-1: **Cons :**  To maintain accurate temperature
+ :-1: **Cons :**  It is not autimatic using any rain sensors
  
 ### 3. SWOT Analysis
 ![SWOT Analysis](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/1_Requirements/swot.PNG)
