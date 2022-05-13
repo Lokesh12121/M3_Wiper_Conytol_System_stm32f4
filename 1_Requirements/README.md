@@ -39,9 +39,9 @@
  :-1: **Cons :**  It is not automated using any rain sensors
  
 ### 3. SWOT Analysis
-![SWOT Analysis](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/1_Requirements/swot.PNG)
+![SWOT Analysis]()
   
 ### 4. Implementation Block Diagram 
-![Design Flow](https://github.com/Lokesh12121/M2_Room_Temperatue_Monitering_SYS/blob/main/1_Requirements/block_diagram.PNG)
+![Design Flow]()
 
 ## Tools : MS Word, MS Excel and Snipping tool
