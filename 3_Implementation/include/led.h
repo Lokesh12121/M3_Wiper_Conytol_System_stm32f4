@@ -1,5 +1,5 @@
 /**
- * @file ADC_PWM_output.h
+ * @file led.h
  * @author Lokesh R
  * @brief A header file for LED for blick and flicker
  * @version 0.1
