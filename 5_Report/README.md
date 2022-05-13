@@ -23,20 +23,19 @@ In this proect we will build manually controlled wiper control system. We built 
 -   [xPack Windoes Build Tool](https://xpack.github.io/windows-build-tools/) -  It is a Windows specific package, customised for the requirements of the Eclipse CDT managed build projects. It includes a recent version of GNU make and a recent version of BusyBox, which provides a convenient implementation for sh/rm/echo.
 
 ## Features
--   __Feature-1:__ The wiper control system becomes active on ___Hold of Button___ or 2 seconds and Red LED will ON indicating system is ON.
--   __feature-2:__ The system has 3 power levels (i.e, speed of motor in real world), we use (1, 4, 8)Hz as freuency levels used to visualize via LED.
+-   __Feature-1(System ON):__ The wiper control system becomes active on ___Hold of Button___ or 2 seconds and ___Red LED___ will ___ON___ indicating system is ON.
+-   __feature-2(3-Control Levels):__ The system has 3 power levels (i.e, speed of motor in real world), we use (1, 4, 8)Hz as freuency levels used to visualize via LED.
     * When the system ___key press-1___(i.e, the push button is pressed once) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 1Hz
     * When the system ___key press-2___(i.e, the push button is pressed twice) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 4Hz
     * When the system ___key press-3___(i.e, the push button is pressed thrice) the Blue, Green and Orange LED's come ON one at a time with the set frequency of 8Hz
--   __Feature-3:__ The sytem will go back to repeat ___feature-2___  when ___key press-4___ 
--   __Feature-4:__ The wiper control system becomes inactive on ___Hold of Button___ or 2 seconds and Red LED will OFF indicating system is OFF.
-
-## Controlling LEDs with Push Button STM32F4
-In this project, we’ve built a wiper control system using STM32F4 Discovery board. Here we use builtin ___button___ and ___LEDs___ to operate or visualize the project.We will control onboard four LEDs of STM32F4 discovery board with a push button. As you can see in the figure shown below a blue color push button is available along with four user LEDs.
-
-![builtin led and button](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/11Capture.PNG)
+-   __Feature-3(Control Off):__ On key ___press-4___ the system is ON(LED-RED-ON), on press again the system goes back to ___step-2___
+-   __Feature-4(System OFF):__ The wiper control system becomes inactive on ___Hold of Button___ or 2 seconds and Red LED will OFF indicating system is OFF.
 
 ### The working of motor is visualized in terms of LED action in STM32F4 - Discovery
+
+## Flow chart
+
+![Flow Chart](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/flow%20chart_1.png)
 
 ## How the project works
 1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
@@ -44,7 +43,11 @@ In this project, we’ve built a wiper control system using STM32F4 Discovery bo
 3.  __Wiper OFF:__ The LED glow pattern stops on the 4th press; the wiper action starts next press onwards as mentioned in step 2
 4.  __Ignition Key Position at Lock:__ The Red LED is OFF, if the user button is pressed and held for 2 secs
 
-## Working when ON
-|Key Press - 1|Key Press - 2|Key Press - 3|
+## Working Scenario
+|Key Press - 1 (Wiper power Lvl-1)|Key Press - 2 (Wiper power Lvl-2)|Key Press - 3 (Wiper power Lvl-3)|
 |:--:|:--:|:--:|
-|![press1](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif)|![press2](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_2.gif)|![press3](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_3.gif)|
+|![press1](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_1.gif)|![press2](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/lvl_2.gif)|![press3](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/ON_state.gif)|
+
+|Key Press and Hold - __ON/OFF__|Key Press - 4 (Wiper off)|Key Press - 5(repeat from Wiper power level-1)|
+|:--:|:--:|:--:|
+| ![press hold](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/pess_hold_on.gif) | ![press4](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/press4.gif) | ![press 5](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/6_Output/pess5.gif) |
