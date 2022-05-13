@@ -1,16 +1,6 @@
 # Wiper Control System
 Wiper is an essential component that used to wipe the raindrops or any water from the windscreen. Wipers are designed and made to clear the water from a windscreen. Most of cars have two wipers on the windscreen, one on the rear window and the other on each headlight. The wiper parts visible from outside the car are the rubber blade, the wiper arm holding the blade, a spring linkage, and parts of the wiper pivots. In this proect we will build manually controlled wiper control system.
 
-## Difference of maually controlled and automated controlled:
-
-![wiper](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/0_Abstract/Capture1.PNG)
-
-## Working method / Scenario:
-1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
-2.  __Wiper ON:__ On press of the user input, Blue, Green and Orange LEDs come ON one at a time with the set frequency, The frequency changes on every alternate key press, 3 frequency levels with 1, 4 and 8 Hz
-3.  __Wiper OFF:__ The LED glow pattern stops on the 4th press; the wiper action starts next press onwards as mentioned in step 2
-4.  __Ignition Key Position at Lock:__ The Red LED is OFF, if the user button is pressed and held for 2 secs
-
 ## Folder Structure
 | Folder | Discription |
 | :---: | :---: | 
@@ -20,6 +10,12 @@ Wiper is an essential component that used to wipe the raindrops or any water fro
 | 3_Implementation |	All code, neccesary files and documentation
 | 4_TestPlanAndOutput | All the test files and 
 | 6_Output | Contains output and media files
+
+## Working method / Scenario:
+1.  __Ignition Key Position at ACC:__ The Red LED is ON, if the user button is pressed and held for 2 secs
+2.  __Wiper ON:__ On press of the user input, Blue, Green and Orange LEDs come ON one at a time with the set frequency, The frequency changes on every alternate key press, 3 frequency levels with 1, 4 and 8 Hz
+3.  __Wiper OFF:__ The LED glow pattern stops on the 4th press; the wiper action starts next press onwards as mentioned in step 2
+4.  __Ignition Key Position at Lock:__ The Red LED is OFF, if the user button is pressed and held for 2 secs
 
 ## In Action
 |ON|OFF|
