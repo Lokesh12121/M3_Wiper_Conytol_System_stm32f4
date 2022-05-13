@@ -1,14 +1,16 @@
-# Design
+# High Level/ Low Level Design
 
-  ## 2. User behavior diagram - High Level
+  ## 1. User behavior diagram - High Level
   
-  It decribes how the user will interface with the system, how the model works.
-  
-   ![Behaviour Flow](https://github.com/Lokesh12121/M2_Server_Room_Temperatue_Monitering_SYS/blob/main/2_Design/block_diagram.png)
+  ![Behaviour Flow](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/2_Design/control_system.png)
    
-   ## 3. Structure Diagram - Low Level
+   ## 2. Structure Diagram - Low Level
   
-   ![Structure Diagram](https://github.com/Lokesh12121/M2_Server_Room_Temperatue_Monitering_SYS/blob/main/2_Design/Circuit1.png)
+   ![Structure Diagram]()
+   
+# Flow chart/ Working Model
+
+![Flow char](https://github.com/Lokesh12121/M3_Wiper_Conytol_System_stm32f4/blob/main/2_Design/flow%20chart_1.png)
    
 ## Tools 
 1.  [Draw.io](https://app.diagrams.net/)
