@@ -14,8 +14,8 @@
 | --- | --- | --- | --- | --- | --- |
 | 01 | Check for Ignition ON | Button Press and hold for 2sec | RED LED ON | RED LED ON | Test and view in hardware |
 | 02 | Check for Wiper power level-1 | Button Press 1st time | All LEDs ON | All LEDs ON-1Hz | Test and view in hardware |
-| 03 | Check for Wiper power level-2 | Button Press 2nd time | All LEDs ON | All LEDs ON-2Hz| Test and view in hardware |
-| 04 | Check for Wiper power level-3 | Button Press 3rd time | All LEDs ON | All LEDs ON-3Hz | Test and view in hardware |
+| 03 | Check for Wiper power level-2 | Button Press 2nd time | All LEDs ON | All LEDs ON-4Hz| Test and view in hardware |
+| 04 | Check for Wiper power level-3 | Button Press 3rd time | All LEDs ON | All LEDs ON-8Hz | Test and view in hardware |
 | 04 | Check for Ignition OFF | Button Press and hold for 2sec | RED LED OFF | RED LED OFF | Test and view in hardware |
 
 ### For Button
