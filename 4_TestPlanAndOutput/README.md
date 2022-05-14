@@ -1,21 +1,30 @@
-# High Level Test Plan
-| Test ID  | Description | Exp I/P | Exp O/P | Actual O/P | Type of Test |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
-| H_01  | System Testing  | LED - ON when all the doors and windows closed  | Pass  | Pass  | Requirement Based  |
-| H_02  | System Testing  | Convert the analog signal from the temperature sensor to the digital value | Pass  | Pass  | Boundary Based  |
-| H_03  | System Testing  | Generate the PWM signal according to the converted digital value  | Pass  | Pass  | Scenario Based  |
-| H_04  | System Testing  | Send the temperature value to the serial monitor using UART protocol  | Pass  | Pass  | Boundary Based  |
+# 1.1 HIGH LEVEL TEST PLAN
 
-# Low Level Test Plan
-| Test ID  | Description | I/P | O/P | Status |
-| ------------- | ------------- | ------------- | ------------- | -------------
-| H_01  | If server room closed   | Push button=1  | Push button=1  | Pass  |
-| H_02  | If server room opened  | Push button=0  | Push button=0  | Pass  |
-| H_03  | Temperature Request  | Temperature=0  | Heater=Off  | Pass  |
-| H_04  | Temperature Request  | Temperature=20  | Room Temperature=20 degree generation | Pass  |
-| H_05  | Temperature Request  | Temperature=25  | Room Temperature=25 degree generation  | Pass  |
-| H_06  | Temperature Request  | Temperature=29  | Room Temperature=29 degree generation  | Pass  |
-| H_07  | Temperature Request  | Temperature=33  | Room Temperature=33 degree generation  | Pass  |
-| H_08  | LED ON | Buttons=1 && Room Temperature=1 | LED=1  | Pass  |
-| H_08  | LED OFF | Buttons=0 && Room Temperature=0  | LED=0  | Pass  |
-| H_08  | Display | Temperature :- 20 deg Cel  | Temperature :- 20 deg Cel  | Pass  |
+| Test ID | Description | Input | Expected output | Actual Output | Test Type |
+| --- | --- | --- | --- | --- | --- |
+| 01 | Ignition ON | User Button Press and hold for 2sec | Red LED ON | Red LED ON | Scenario indicating System ON |
+| 02 | Viper ON | User Button Press Button 1st tme  | Blue, Green, Orange LEDs Flicker with 1Hz | Blue, Green, Orange LEDs Flicker with 1Hz  | Scenario-Wiper power level-1 |
+| 03 | Viper ON | User Button Press Button 2nd time | Blue, Green, Orange LEDs Flicker with 4Hz | Blue, Green, Orange LEDs Flicker with 4Hz  | Scenario-Wiper power level-2 |
+| 04 | Viper ON | User Button Press Button 3rd time | Blue, Green, Orange LEDs Flicker with 8Hz | Blue, Green, Orange LEDs Flicker with 8Hz  | Scenario-Wiper power level-3 |
+| 05 | Ignition OFF | User Button Press and hold for 2sec |  Red LED OFF | Red LED OFF | Scenario indicating System OFF |
+
+# 1.2 LOW LEVEL TEST PLAN
+
+| Test ID | Description | Input | Expected output | Actual Output | Passed Or Not |
+| --- | --- | --- | --- | --- | --- |
+
+| Test ID (for LED)| Description | Input | Expected output | Actual Output | passed/not |
+| --- | --- | --- | --- | --- | --- |
+| 01 | Check for ignition_on() | 1st 2sec User Button Press | RED LED ON | RED LED ON | ✅ |
+| 02 | Check for led_cycle1() | 1st User Button Press | All LEDs ON | All LEDs ON-1Hz | ✅ |
+| 03 | Check for led_cycle1() | 1st User Button Press | All LEDs ON | All LEDs ON-2Hz| ✅ |
+| 04 | Check for led_cycle1() | 1st User Button Press | All LEDs ON | All LEDs ON-3Hz | ✅ |
+| 04 | Check for ignition_off() | 2nd 2sec User Button Press | RED LED OFF | RED LED OFF | ✅ |
+
+| Test ID (for Button Count For Turning Viper on)| Description | Input | Expected output | Actual Output | passed/not |
+| --- | --- | --- | --- | --- | --- |
+| 01 | Check for Button_Count() | 1 User Button Press | 1 | 1 | ✅ |
+| 02 | Check for Button_Count() | 2 User Button Presses | 2 | 2 | ✅ |
+| 03 | Check for Button_Count() | 3 User Button Presses | 3 | 3 | ✅ |
+
+---
