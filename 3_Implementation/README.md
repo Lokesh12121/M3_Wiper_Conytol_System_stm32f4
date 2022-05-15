@@ -1,5 +1,11 @@
 ## All the build, main file, essential files are in this folder
 ### The subfolders are created by STM32 Cube IDE, so the makefile is in Debug folder
+### To Make
+[In Linux]()
+command: make -C Debug/ all
+### To Run output generated file
+[In Linux]()
+command: qemu-system-gnuarmeclipse.exe -M STM32F4-Discovery -image Debug/Blinky.elf
 ## Folder Structure
 | Folder | Discription |
 | :---: | :---: | 
