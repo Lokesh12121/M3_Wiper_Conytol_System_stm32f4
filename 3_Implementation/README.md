@@ -1,5 +1,5 @@
 ## All the build, main file, essential files are in this folder
-
+### The subfolders are created by STM32 Cube IDE, so the makefile is in Debug folder
 ## Folder Structure
 | Folder | Discription |
 | :---: | :---: | 
