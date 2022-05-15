@@ -1,31 +1,12 @@
-/*
- * This file is part of the µOS++ distribution.
- *   (https://github.com/micro-os-plus)
- * Copyright (c) 2014 Liviu Ionescu.
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or
- * sell copies of the Software, and to permit persons to whom
- * the Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
+/**
+ * @file main.c
+ * @author Lokesh R
+ * @brief A project main file for circuit simulation
+ * @version 0.1
+ * @date 2022-04-22
+ * @copyright Copyright (c) 2022
+ * 
  */
-
-// ----------------------------------------------------------------------------
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,32 +15,18 @@
 #include "timer.h"
 #include "led.h"
 
-// ----------------------------------------------------------------------------
-//
-// Standalone STM32F4 led blink sample (trace via DEBUG).
-//
-// In debug configurations, demonstrate how to print a greeting message
-// on the trace device. In release configurations the message is
-// simply discarded.
-//
-// Then demonstrates how to blink a led with 1 Hz, using a
-// continuous loop and SysTick delays.
-//
-// Trace support is enabled by adding the TRACE macro definition.
-// By default the trace messages are forwarded to the DEBUG output,
-// but can be rerouted to any device or completely suppressed, by
-// changing the definitions required in system/src/diag/trace-impl.c
-// (currently OS_USE_TRACE_ITM, OS_USE_TRACE_SEMIHOSTING_DEBUG/_STDOUT).
-//
 
-// ----- Timing definitions -------------------------------------------------
 
-// Keep the LED on for 2/3 of a second.
-#define BLINK_ON_TICKS  (1000)
-#define BLINK_OFF_TICKS (250)
-#define TICKS (125)
+// ----- Timing definitions --------------------------------------------------------------
 
-// ----- main() ---------------------------------------------------------------
+// Keep the LED on for 1Hz, 4Hz and 8Hz
+// 1Hz means fliker 1 time in 1000ms
+// 4Hz means fliker 4 time in 1000ms and 8Hz means fliker 8 time in 1000ms
+#define BLINK_ON_TICKS  (1000)			// 1000/1
+#define BLINK_OFF_TICKS (250)			// 1000/4
+#define TICKS (125)				// 1000/8
+
+// ----- function main() ------------------------------------------------------------------
 
 // Sample pragmas to cope with warnings. Please note the related line at
 // the end of this function, used to pop the compiler diagnostics status.
@@ -68,6 +35,7 @@
 #pragma GCC diagnostic ignored "-Wmissing-declarations"
 #pragma GCC diagnostic ignored "-Wreturn-type"
 
+// Defining LEDs and counter
 int GREEN=12,ORANGE=13,RED=14,BLUE=15;
 uint8_t flag=0;
 
@@ -75,8 +43,8 @@ void EXTI0_IRQHandler(void);
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 
-int
-main(int argc, char* argv[])
+// Main block-------------------------------------------------------------------------------
+int main(int argc, char* argv[])
 {
   // Send a greeting to the trace device (skipped on Release).
   trace_puts("Hello Arm World!");
@@ -93,17 +61,16 @@ main(int argc, char* argv[])
   blink_led_init(RED);
 
   Switch_init();
-  uint32_t seconds = 0;
 
-  // Infinite loop
+  // Infinite loop until system turns OFF
   while (1)
     {
 	  if(flag==1)
 	  {
       blink_led_on(RED);
       }
-	  else{
-		  if(flag==2){
+	  else{	
+		  if(flag==2){						// Wiper Level 1
 			  blink_led_on(BLUE);
 			  timer_sleep(BLINK_ON_TICKS);
 			  blink_led_on(GREEN);
@@ -118,7 +85,7 @@ main(int argc, char* argv[])
 			  timer_sleep(BLINK_ON_TICKS);
 		  }else
 		  {
-			  if(flag==3){
+			  if(flag==3){					// Wiper Level 2
 				  blink_led_on(BLUE);
 				  timer_sleep(BLINK_OFF_TICKS);
 				  blink_led_on(GREEN);
@@ -133,7 +100,7 @@ main(int argc, char* argv[])
 				  timer_sleep(BLINK_OFF_TICKS);
 			  }else
 			  {
-				  if(flag==4){
+				  if(flag==4){				// Wiper Level 3
 				        blink_led_on(BLUE);
 				        timer_sleep(TICKS);
 				        blink_led_on(GREEN);
@@ -149,9 +116,9 @@ main(int argc, char* argv[])
 				  }
 			  }
 		  }
-	  }
+	  } // Wiper OFF
     }
-  // Infinite loop, never return.
+  // Infinite loop, never return-------------------------------------------------------------
 }
 
 void EXTI0_IRQHandler(void)
@@ -169,7 +136,4 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
             }
     }
 }
-
-#pragma GCC diagnostic pop
-
 // ----------------------------------------------------------------------------
